@@ -1,3 +1,5 @@
+package Tasks;
+
 public class Point3D {
     private double x, y, z;
     public Point3D(int x, int y, int z){

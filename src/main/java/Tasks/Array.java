@@ -1,28 +1,33 @@
+package Tasks;
+
 import java.util.Scanner;
 
 public class Array {
-    private int c = 0;
-    // Создание массива на 100 элементов
-    Integer[] array = new Integer[100];
+    private int[] array;
+    public Array(int size)
+    {
+        if(size <= 0)
+        {
+            throw new IllegalArgumentException("wrong size");
+        }
+        array = new int[size];
+    }
     public void outputArray() { // Вывод массива на экран
-        for (int i = 0; i < c; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
     // Считывание чисел с клавиатуры (первое число - кол-во чисел, которое планируется ввести)
     public void inputArray() {
         Scanner scanner = new Scanner(System.in);
-        int x;
-        x = scanner.nextInt();
-        for (int i = 0; i < x; i++) {
-            array[c] = scanner.nextInt();
-            c++;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = scanner.nextInt();
         }
     }
     // Сумма чисел массива
     public void sumArray() {
         int sum = 0;
-        for (int i = 0; i < c; i++) {
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
         System.out.println("Sum: " + sum);
@@ -30,7 +35,7 @@ public class Array {
     // Сколько чётных чисел
     public void evenNumbers() {
         int count = 0;
-        for (int i = 0; i < c; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0)
                 count += 1;
         }
@@ -39,7 +44,7 @@ public class Array {
     // Числа принадлежащие отрезку
     public void segment(int a, int b) {
         int count = 0;
-        for (int i = 0; i < c; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] >= a && array[i] <= b)
                 count += 1;
         }
@@ -48,7 +53,7 @@ public class Array {
     // Все ли числа положительные
     public void positive() {
         boolean flag = true;
-        for (int i = 0; i < c; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] <= 0) {
                 flag = false;
                 break;
@@ -63,10 +68,10 @@ public class Array {
     // Реверс массива
     public void reverse() {
         int d;
-        for (int i = 0; i < c / 2; i++) {
+        for (int i = 0; i < array.length / 2; i++) {
             d = array[i];
-            array[i] = array[c-i-1];
-            array[c-i-1] = d;
+            array[i] = array[array.length-i-1];
+            array[array.length-i-1] = d;
         }
         System.out.println("Reversed");
     }

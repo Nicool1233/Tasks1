@@ -1,7 +1,11 @@
+package Tasks;
+
+import Tasks.Array;
+
 public class Task8 {
     public static void main(String[] args) {
-        // Вызовы функций, описанных в классе Array
-        Array myObj = new Array();
+        // Вызовы функций, описанных в классе Tasks.Array
+        Array myObj = new Array(4);
         myObj.inputArray();
         myObj.outputArray();
         myObj.sumArray();

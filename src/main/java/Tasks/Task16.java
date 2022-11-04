@@ -1,3 +1,7 @@
+package Tasks;
+
+import Tasks.Point3D;
+
 public class Task16 {
     public static void main(String[] args) {
         // Вектор из двух точек

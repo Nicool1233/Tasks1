@@ -1,3 +1,8 @@
+package Tasks;
+
+import Tasks.Point3D;
+import Tasks.Vector3D;
+
 import java.util.ArrayList;
 
 public class Vector3DArray {

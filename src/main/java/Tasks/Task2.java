@@ -1,8 +1,10 @@
+package Tasks;
+
 import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        float x, y, z;
+        double x, y, z;
         Scanner scanner = new Scanner(System.in); // Инициализируем считывание с клавиатуры
         x = scanner.nextFloat(); // Считывание вещественного числа
         y = scanner.nextFloat();
@@ -12,33 +14,22 @@ public class Task2 {
         // Узнаём, как числа идут в порядке возрастания
         if (x > y && x > z){
             if (y > z){
-                System.out.println(z);
-                System.out.println(y);
-                System.out.println(x);
+                System.out.println(z+" " +y +" " + x);
             } else {
-                System.out.println(y);
-                System.out.println(z);
-                System.out.println(x);
+                System.out.println(y+" " +z +" " + x);
             }
         } else if (y > z){
             if (x > z) {
-                System.out.println(z);
-                System.out.println(x);
-                System.out.println(y);
+                System.out.println(z+" " +x +" " + y);
+
             } else {
-                System.out.println(x);
-                System.out.println(z);
-                System.out.println(y);
+                System.out.println(x+" " +z +" " + y);
             }
         } else {
             if (x > y){
-                System.out.println(y);
-                System.out.println(x);
-                System.out.println(z);
+                System.out.println(y+" " +x +" " + z);
             } else {
-                System.out.println(x);
-                System.out.println(y);
-                System.out.println(z);
+                System.out.println(x+" " +y +" " + z);
             }
         }
   }

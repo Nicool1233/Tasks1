@@ -1,3 +1,7 @@
+package Tasks;
+
+import Tasks.Point3D;
+
 public class Task17 {
     public static void main(String[] args) {
         Point3D p1 = new Point3D(1, 3, 1);

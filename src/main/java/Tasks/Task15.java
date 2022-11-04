@@ -1,3 +1,7 @@
+package Tasks;
+
+import Tasks.Point3D;
+
 public class Task15 {
     public static void main(String[] args) {
         // Создание точек

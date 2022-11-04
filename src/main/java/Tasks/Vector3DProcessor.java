@@ -1,3 +1,7 @@
+package Tasks;
+
+import Tasks.Vector3D;
+
 public class Vector3DProcessor {
     private Vector3D v1, v2;
     
