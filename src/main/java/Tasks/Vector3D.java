@@ -1,5 +1,7 @@
 package Tasks;
 
+import java.util.Objects;
+
 public class Vector3D {
     private Point3D p;
 
@@ -31,10 +33,18 @@ public class Vector3D {
                          Math.pow(p.getY(), 2) + 
                          Math.pow(p.getZ(), 2));
     }
-    
-    public boolean vectorsEqual(Vector3D v){ // Равенство векторов
-        return ((v.p.getX() - p.getX() < 0.0001) && 
-            (v.p.getY() - p.getY() < 0.0001) && 
-            (v.p.getZ() - p.getZ() < 0.0001));
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vector3D vector3D = (Vector3D) o;
+        return Objects.equals(p, vector3D.p);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(p);
     }
 }
+

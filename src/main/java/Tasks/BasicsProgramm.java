@@ -7,7 +7,7 @@ public class BasicsProgramm
     public static double[] task4(double a, double b, double c)
     {
         double d, x1, x2;
-        if(a == 0)
+        if(Double.compare(a,0) == 0)
         {
             x1 = -c/b;
             double[] roots = new double[1];
@@ -51,10 +51,25 @@ public class BasicsProgramm
         d = a2;
         e = b2;
         f = c2;
-        y = (f -(d * c / a1)) / (e - (b * d / a)); // Выводится из двух систем линейных уравнений
-        x = (c - b * y) / a;
-        System.out.println("x:" + x);
-        System.out.println("y:" + y);
+        double determinant = a1*b2-b1*a2;
+        if(Double.compare(determinant, 0) == 0 && (Double.compare(c1, 0) != 0 || Double.compare(c2, 0) != 0))
+        {
+            System.out.println("Решений нет");
+        } else
+        {
+            if(Double.compare(determinant, 0) == 0)
+            {
+                System.out.println("Бесконечное число решений");
+            }
+            else
+            {
+                double determinant1 = c1*b2-c2*b1;
+                double determinant2 = a1*c2-c1*a2;
+                x = determinant1/determinant;
+                y = determinant2/determinant;
+                System.out.println(x + " " + y + "Решение системы");
+            }
+        }
     }
     public static double task7(double x, double eps)
     {
@@ -63,7 +78,7 @@ public class BasicsProgramm
             fact = 1; // Факториал
             add = eps + 1;
             sum = 1;
-            while (eps < add) { // Пока точность меньше слагаемого
+            while (Double.compare(eps,Math.abs(add)) < 0) { // Пока точность меньше слагаемого
                 fact *= i;
                 add = Math.pow(x, i) / fact;
                 sum += add;

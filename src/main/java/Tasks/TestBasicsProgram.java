@@ -15,8 +15,8 @@ public class TestBasicsProgram
         System.out.println("__________________________________");
         BasicsProgramm.task5(0, 5, 0.5);
         System.out.println("__________________________________");
-        BasicsProgramm.task6(1, 1 , 2 , 1, 3, 4);
+        BasicsProgramm.task6(0, 0 , 0 , 0, 0, 1);
         System.out.println("__________________________________");
-        System.out.println(BasicsProgramm.task7(1, 0.000001));
+        System.out.println(BasicsProgramm.task7(-2, 0.000001));
     }
 }
